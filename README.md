@@ -15,6 +15,27 @@ The `applications` folder contains the data and code for empirical applications.
 
 A companion [R package](https://github.com/zhentaoshi/panel-local-projection) provides functions to implement the estimation method.
 
+## Docker Environment
+
+To run the R notebook in a fully reproducible environment, build the Docker image from the repository root:
+
+```bash
+docker build -t panel-lp-replication .
+```
+
+Launch the container, exposing JupyterLab on port `8888` and mounting the repository so that changes persist:
+
+```bash
+docker run --rm -it -p 8888:8888 ^
+  -e JUPYTER_TOKEN=panel-lp ^
+  -v ${PWD}:/home/jovyan/work ^
+  panel-lp-replication
+```
+
+The container will print a URL containing the token (or the `JUPYTER_TOKEN` you supplied). Open that link in a browser to access JupyterLab, then open `applications/replication.ipynb`. Set the working directory in the first code cell to `/home/jovyan/work/applications` (or simply remove the `setwd` call) so that the notebook can load the CSV files.
+
+All required R packages (ggplot2, reshape2, ggpubr) are pre-installed in the image. Feel free to adjust the `docker run` command (e.g., mount a different volume or change the exposed port) if needed.
+
 ## Contributors
 
 * Shen Shu
