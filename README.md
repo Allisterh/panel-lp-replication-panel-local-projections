@@ -26,9 +26,9 @@ docker build -t panel-lp-replication .
 Launch the container, exposing JupyterLab on port `8888` and mounting the repository so that changes persist:
 
 ```bash
-docker run --rm -it -p 8888:8888 ^
-  -e JUPYTER_TOKEN=panel-lp ^
-  -v ${PWD}:/home/jovyan/work ^
+docker run --rm -it -p 8888:8888
+  -e JUPYTER_TOKEN=panel-lp
+  -v ${PWD}:/home/jovyan/work
   panel-lp-replication
 ```
 
