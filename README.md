@@ -38,7 +38,7 @@ All required R packages (ggplot2, reshape2, ggpubr) are pre-installed in the ima
 
 ## Contributors
 
-* Shen Shu
+* Shen Shu, Shi Zhentaos
 
 
 ## License

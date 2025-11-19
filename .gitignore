@@ -7,7 +7,9 @@
 *.lyx#
 *.tmp
 
-
+*.tex
+*.bib
+*.pdf
 
 ## SWP
 *.bak
