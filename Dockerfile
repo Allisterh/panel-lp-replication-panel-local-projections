@@ -1,8 +1,10 @@
 # syntax=docker/dockerfile:1.7
-FROM jupyter/r-notebook:lab-4.2.4
+FROM jupyter/r-notebook:x86_64-r-4.3.1
+
+# FROM rocker/binder:4.4
 
 USER root
-RUN apt-get update
+RUN apt-get update && apt-get install -y --no-install-recommends \
     libxml2-dev \
     libssl-dev \
     libcurl4-openssl-dev \
@@ -15,8 +17,12 @@ RUN apt-get update
     libjpeg-dev && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN mamba install --yes "r-ggplot2" "r-reshape2" "r-ggpubr"
-RUN mamba clean --all -f -y
+RUN mamba install --yes -c conda-forge \
+    "r-ggplot2=3.5.2" \
+    "r-ggpubr=0.6.1" \
+    "r-reshape2" && \
+    mamba clean --all -f -y
+
 
 WORKDIR /home/jovyan/work
 COPY . /home/jovyan/work
