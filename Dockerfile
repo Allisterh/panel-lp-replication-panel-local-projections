@@ -20,14 +20,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN mamba install --yes -c conda-forge \
     "r-ggplot2=3.5.2" \
     "r-ggpubr=0.6.1" \
-    "r-reshape2" && \
+    "r-reshape2=1.4.5" && \
     mamba clean --all -f -y
 
 
 WORKDIR /home/jovyan/work
+RUN git clone --depth=1 https://github.com/metricshilab/panel-lp-replication.git .
 # COPY . /home/jovyan/work
 
-RUN git clone --depth=1 https://github.com/metricshilab/panel-lp-replication.git .
 RUN fix-permissions "/home/${NB_USER}"
 
 EXPOSE 8888
