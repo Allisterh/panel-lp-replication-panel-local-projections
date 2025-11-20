@@ -20,7 +20,7 @@ A companion [R package](https://github.com/zhentaoshi/panel-local-projection) pr
 To run the R notebook in a fully reproducible environment, build the Docker image from the repository root:
 
 ```bash
-docker build -t panel-lp-replication .
+docker build -t plp .
 ```
 
 Launch the container, exposing JupyterLab on port `8888` and mounting the repository so that changes persist:
@@ -38,7 +38,7 @@ All required R packages (ggplot2, reshape2, ggpubr) are pre-installed in the ima
 
 ## Contributors
 
-* Shen Shu, Shi Zhentaos
+* Shen Shu, Shi Zhentao
 
 
 ## License

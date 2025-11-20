@@ -25,7 +25,9 @@ RUN mamba install --yes -c conda-forge \
 
 
 WORKDIR /home/jovyan/work
-COPY . /home/jovyan/work
+# COPY . /home/jovyan/work
+
+RUN git clone --depth=1 https://github.com/metricshilab/panel-lp-replication.git .
 RUN fix-permissions "/home/${NB_USER}"
 
 EXPOSE 8888
