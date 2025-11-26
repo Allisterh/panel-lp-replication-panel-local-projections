@@ -5,6 +5,8 @@ This repository hosts a replication package for
 
 * Ziwei Mei, Liugang Sheng, Zhentao Shi (2025), "Nickell Bias in Panel Local Projection," *Journal of International Economics*. [[arxiv:2302.13455](https://arxiv.org/abs/2302.13455)].
 
+* `paper_summary.pdf` is a minimum non-technical summary of the paper.
+
 The replication code is written in R.
 
 ## Repository Structure and Replication Overview
