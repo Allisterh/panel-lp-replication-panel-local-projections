@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "Contents & Packages"
 permalink: /contents/
 nav_order: 2
@@ -9,18 +9,24 @@ nav_order: 2
 
 The replication package is organized as follows (paths are relative to the repository root):
 
-- `applications/` – Empirical applications.  
-  Contains the data files (`empirical_*.csv`), the main R routine (`LP_panel_all.r`), and the Jupyter notebook `replication.ipynb` which reproduces the empirical results and figures in the paper (running time: ≲ 30 seconds).
+## `applications/`
 
-- `simulations/` – Monte Carlo simulations for the main text (Figures 1–3).  
-  See `simulations/README.md` for details about scripts and figures.
+- Empirical applications, including `empirical_*.csv` data files.
+- Main R routine: `LP_panel_all.r`.
+- `replication.ipynb` Jupyter notebook reproducing every empirical result and figure in <=30 seconds.
 
-- `simulations_appendix/` – Simulation code for Appendix C (Figures C1–C12).  
-  See `simulations_appendix/readme.md` for the workflow and instructions.
+## `simulations/`
 
-In short:
+- Monte Carlo experiments for the main text (Figures 1-3).
+- See `simulations/README.md` for script-by-script details and plotting instructions.
 
-- Empirical results → `applications/`
-- Main-text simulations → `simulations/`
-- Appendix simulations → `simulations_appendix/`
+## `simulations_appendix/`
 
+- Simulation workflow for Appendix C (Figures C1-C12).
+- Read `simulations_appendix/readme.md` for the job orchestration and figure construction steps.
+
+### Summary
+
+- Empirical results -> `applications/`
+- Main-text simulations -> `simulations/`
+- Appendix simulations -> `simulations_appendix/`

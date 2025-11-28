@@ -1,40 +1,47 @@
 ---
-layout: home
-title: "Home"
+layout: default
+title: "Overview"
 nav_order: 1
+permalink: /
 ---
 
 # Panel Local Projection Replication
+{: .fs-9 }
 
-This site documents the replication package for
+Ensuring transparent and reproducible results for *"Nickell Bias in Panel Local Projection: Financial Crises Are Worse Than You Think."*
+{: .lead }
 
-> Ziwei Mei, Liugang Sheng, Zhentao Shi (2025),  
-> **"Nickell Bias in Panel Local Projection: Financial Crises Are Worse Than You Think,"**  
-> *Journal of International Economics*.  
+> Ziwei Mei, Liugang Sheng, Zhentao Shi (2025), *Journal of International Economics*
 > [[arxiv:2302.13455](https://arxiv.org/abs/2302.13455)]
 
-The repository provides:
+## What You'll Find Here
 
-- Empirical applications used in the paper.
-- Monte Carlo simulations for main-text figures.
-- Additional simulation material for the appendix.
+- **Applications** - R scripts and notebooks that replicate every empirical result in seconds.
+- **Simulations** - Monte Carlo experiments behind the paper's main and appendix figures.
+- **Docker workflow** - A hardened reproduction environment with every dependency baked in.
+
+[Explore the Repository Contents]({{ "/contents/" | relative_url }}){: .btn .btn-primary .mr-2 }
+[Set Up the Docker Environment]({{ "/docker/" | relative_url }}){: .btn }
+
+## Why Local Projections Matter
+
+The package implements the panel local projection estimator proposed in the paper, providing tools to study dynamic responses to shocks while addressing Nickell bias. With minimal setup you can rerun the authors' analysis.
 
 
 # External Packages
 
-The estimation method is implemented in the following external packages:
+Enhance or extend the analysis using the official packages:
 
-- **R package**: [`panel-local-projection`](https://github.com/zhentaoshi/panel-local-projection)  
-  Provides functions to implement the panel local projection estimator used in the paper.
+| Platform | Repository | Notes |
+| --- | --- | --- |
+| R | [`panel-local-projection`](https://github.com/zhentaoshi/panel-local-projection) | Functions to estimate the panel LP model used in the paper. |
+| Stata (in progress) | [`panel-local-projection-stata`](https://github.com/shenshuuu/panel-local-projection-stata) | Ongoing port of the estimator to Stata. |
 
-- **Stata package** (under construction): [`panel-local-projection-stata`](https://github.com/shenshuuu/panel-local-projection-stata)
+These packages are optional for replication but useful when applying the method to new data sets.
 
-These packages are not required to run the self-contained replication notebook in this repository, but they are useful for applying the method to other data sets.
 
-# Navigation
+## Maintainers
 
-Use the navigation bar to explore:
-
-- [`Contents`]({{ "/contents" | relative_url }}) for an overview of folders and assets therein.
-- [`Docker`]({{ "/docker" | relative_url }}) for instructions on running the code in a fully reproducible environment.
-
+- [Pan Ji](https://github.com/PanJi-0)
+- [Shen Shu](https://github.com/shenshuuu) - main contact
+- [Shi Zhentao](https://github.com/zhentaoshi)

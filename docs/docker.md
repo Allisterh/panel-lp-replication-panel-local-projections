@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "Docker & Strong Replication"
 permalink: /docker/
 nav_order: 3
@@ -7,25 +7,23 @@ nav_order: 3
 
 # Docker Environment for Strong Replication
 
-To ensure a fully reproducible environment, we provide a Docker-based setup that contains all required R dependencies and tools.
+To ensure a fully reproducible environment, the replication package ships with a Docker workflow that bundles the full R stack, required packages, and JupyterLab.
 
-## DockerHub Image
+> **Recommended**: Use Docker whenever you need a clean-room replication or plan to run the notebook on a new machine.
+{: .tip }
 
-An R environment is available on DockerHub:
+## Prebuilt Image
 
-- Image: [`ztshi/plp`](https://hub.docker.com/repository/docker/ztshi/plp)
+- **Registry**: [`ztshi/plp`](https://hub.docker.com/repository/docker/ztshi/plp)
+- Ready for local machines or GitHub Codespaces (install the suggested Jupyter kernel extension when prompted).
 
-This image can be used locally or in cloud environments such as GitHub Codespaces. In Codespaces, install a Jupyter Kernel extension if prompted.
-
-## Local Reproducible Environment
-
-From the repository root, build the Docker image:
+## Build Locally
 
 ```bash
 docker build -t plp .
 ```
 
-Launch the container, exposing JupyterLab on port `8888` and mounting the repository so that your changes persist:
+## Run the Container
 
 ```bash
 docker run --rm -it -p 8888:8888 \
@@ -34,11 +32,14 @@ docker run --rm -it -p 8888:8888 \
   plp
 ```
 
-The container prints a URL containing the token (or the `JUPYTER_TOKEN` you supplied). Open that URL in a browser to access JupyterLab.
+1. Wait for the console to print the JupyterLab URL (token or `panel-lp`).
+2. Open the URL in a browser.
+3. Launch `applications/replication.ipynb`.
 
-Once JupyterLab is running, open:
+All required R libraries (`ggplot2`, `reshape2`, `ggpubr`, etc.) are baked into the image, so the notebook runs without additional setup.
 
-- `applications/replication.ipynb`
+## Troubleshooting
 
-All required R packages (such as `ggplot2`, `reshape2`, and `ggpubr`) are pre-installed in the image. Executing the notebook reproduces the empirical results and figures reported in the paper, providing a strong replication environment.
-
+- **Port already in use**: change `-p 8888:8888` to another host port (e.g., `-p 8787:8888`).
+- **Permission issues on Windows**: ensure Docker Desktop has file-sharing enabled for the repository directory.
+- **Need persistent tokens**: adjust `JUPYTER_TOKEN` or omit the flag to have Jupyter generate a random token each run.

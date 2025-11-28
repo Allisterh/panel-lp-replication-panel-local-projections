@@ -1,11 +1,12 @@
 title: "Panel Local Projection Replication"
-description: "Replication package for 'Nickell Bias in Panel Local Projection'"
-theme: minima
+description: "Replication package for 'Nickell Bias in Panel Local Projection: Financial Crises Are Worse Than You Think'"
+remote_theme: "just-the-docs/just-the-docs"
+color_scheme: light
 
-show_excerpts: true
+search_enabled: true
+aux_links:
+  "View on GitHub":
+    - "https://github.com/zhentaoshi/panel-lp-replication"
 
-header_pages:
-  - index.md
-  - contents.md
-  - docker.md
-
+footer_content: >
+  Licensed under MIT.
