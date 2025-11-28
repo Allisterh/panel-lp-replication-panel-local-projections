@@ -22,9 +22,12 @@ In short:
 - Appendix simulations -> `simulations_appendix/`
 
 
-## R Package
+## Packages
 
-A companion [R package](https://github.com/zhentaoshi/panel-local-projection) provides functions to implement the estimation method.
+* [R package](https://github.com/zhentaoshi/panel-local-projection) provides functions to implement the estimation method.
+
+* [Stata package](https://github.com/shenshuuu/panel-local-projection-stata) is under construction.
+
 
 ## Docker Environment
 
