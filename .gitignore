@@ -11,6 +11,7 @@
 *.bib
 *.pdf
 *.sh
+Gemfile.lock
 
 ## SWP
 *.bak
