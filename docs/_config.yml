@@ -1,0 +1,11 @@
+title: "Panel Local Projection Replication"
+description: "Replication package for 'Nickell Bias in Panel Local Projection'"
+theme: minima
+
+show_excerpts: true
+
+header_pages:
+  - index.md
+  - contents.md
+  - docker.md
+
