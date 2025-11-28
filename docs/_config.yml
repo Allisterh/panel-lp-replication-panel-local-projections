@@ -8,5 +8,8 @@ aux_links:
   "View on GitHub":
     - "https://github.com/zhentaoshi/panel-lp-replication"
 
+plugins:
+  - jekyll-remote-theme
+
 footer_content: >
   Licensed under MIT.
