@@ -61,6 +61,18 @@ docker run --rm -it -p 8888:8888 \
 
 The container will print a URL containing the token (or the `JUPYTER_TOKEN` you supplied). Open that link in a browser to access JupyterLab, then open `applications/replication.ipynb`. All required R packages (ggplot2, reshape2, ggpubr) are pre-installed in the image.
 
+## Documentation Site
+
+The GitHub Pages site in `docs/` can be previewed locally with [Jekyll](https://jekyllrb.com/):
+
+```bash
+cd docs
+bundle install
+bundle exec jekyll serve --livereload
+```
+
+This requires Ruby (>=3.0 recommended) and Bundler. Once the server is running, open the URL printed in the terminal (typically `http://127.0.0.1:4000`) to browse the site.
+
 ## Contributors
 
 * [Pan Ji](https://github.com/PanJi-0), [Shen Shu](https://github.com/shenshuuu), [Shi Zhentao](https://github.com/zhentaoshi)
@@ -70,4 +82,3 @@ The container will print a URL containing the token (or the `JUPYTER_TOKEN` you 
 ## License
 
 This work is licensed under the MIT License.
-

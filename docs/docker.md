@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Docker & Strong Replication"
+title: "Docker"
 permalink: /docker/
 nav_order: 3
 ---

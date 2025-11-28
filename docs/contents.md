@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Contents & Packages"
+title: "Contents"
 permalink: /contents/
 nav_order: 2
 ---
