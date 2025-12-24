@@ -273,7 +273,7 @@ calculate_se_fe <- function(data, N, lag = FALSE, cluster = FALSE,
           valid_indices <- (j + 1):T_h
           g_t <- g[valid_indices]
           g_t_minus_j <- g[valid_indices - j]
-          Delta_j <- sum(g_t * g_t_minus_j) / T_h
+          Delta_j <- sum(g_t * g_t_minus_j)
           return(Delta_j)
         }
 
@@ -290,7 +290,7 @@ calculate_se_fe <- function(data, N, lag = FALSE, cluster = FALSE,
         }
 
         R_NT_DK <- R_NT_DK / (N * T_h)
-        V_TW <- solve(Q) %*% (R_N + R_NT_DK) %*% solve(Q)
+        V_TW <- solve(Q) %*% R_NT_DK %*% solve(Q)
 
       } else {
         # Two-way clustered standard errors
