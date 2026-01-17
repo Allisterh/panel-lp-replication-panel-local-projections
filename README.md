@@ -3,7 +3,7 @@
 
 This repository hosts a replication package for
 
-* Ziwei Mei, Liugang Sheng, Zhentao Shi (2025), "Nickell Bias in Panel Local Projection: Financial Crises Are Worse Than You Think," *Journal of International Economics*. [[arxiv:2302.13455](https://arxiv.org/abs/2302.13455)].
+* Ziwei Mei, Liugang Sheng, Zhentao Shi (2026), "[Nickell Bias in Panel Local Projection: Financial Crises Are Worse Than You Think](https://www.sciencedirect.com/science/article/abs/pii/S0022199625001679)," *Journal of International Economics*, 104210. [[arxiv:2302.13455](https://arxiv.org/abs/2302.13455)].
 
 * `paper_summary.pdf` is a minimum non-technical summary of the paper.
 
