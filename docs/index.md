@@ -25,7 +25,6 @@ Ensuring transparent and reproducible results for *"Nickell Bias in Panel Local 
 [Explore the Repository Contents]({{ "/contents/" | relative_url }}){: .btn .btn-primary .mr-2 }
 [Set Up the Docker Environment]({{ "/docker/" | relative_url }}){: .btn }
 
-## Why Local Projections Matter
 
 The package implements the panel local projection estimator proposed in the paper, providing tools to study dynamic responses to shocks while addressing Nickell bias. With minimal setup you can rerun the authors' analysis.
 
