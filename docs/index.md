@@ -35,8 +35,8 @@ Enhance or extend the analysis using the official packages:
 
 | Platform | Repository | Notes |
 | --- | --- | --- |
-| R | [`panel-local-projection`](https://github.com/zhentaoshi/panel-local-projection) | Functions to estimate the panel LP model used in the paper. |
-| Stata (in progress) | [`panel-local-projection-stata`](https://github.com/shenshuuu/panel-local-projection-stata) | Ongoing port of the estimator to Stata. |
+| R | [`panel-local-projection`](https://github.com/zhentaoshi/panel-local-projection) | SPJ estimator for panel LP, as in the paper. |
+| Stata | [`panel-local-projection-stata`](https://github.com/shenshuuu/panel-local-projection-stata) | The same as above, in Stata. |
 
 These packages are optional for replication but useful when applying the method to new data sets.
 
